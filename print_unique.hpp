@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "utils.hpp"
+
 #include <vector>
 #include <iostream>
 
@@ -8,11 +10,7 @@ void unique_combination(const std::vector<int>& input, std::vector<int>& data, i
 {
     if (k == data_index)
     {
-        for (auto a : data)
-        {
-            std::cout << a << ' ';
-        }
-        std::cout << '\n';
+        print(data);
         return;
     }
 
