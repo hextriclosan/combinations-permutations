@@ -21,7 +21,7 @@ int main()
     std::cout << print_sums({1, 2}, 5) << '\n';
     std::cout << '\n';
 
-    print_perm({1, 2, 3}, 0);
+    print_perm({1, 2, 3});
     std::cout << '\n';
 
 }

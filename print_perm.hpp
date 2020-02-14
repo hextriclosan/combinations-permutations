@@ -25,7 +25,7 @@ void perm(std::vector<int>& input, int i)
     }
 }
 
-void print_perm(const std::vector<int>& input, int i)
+void print_perm(const std::vector<int>& input)
 {
     auto in = input;
     perm(in, 0);
