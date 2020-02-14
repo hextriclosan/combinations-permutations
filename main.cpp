@@ -1,12 +1,10 @@
 
 
 #include "print_unique.hpp"
-
 #include "count_sums.hpp"
-
 #include "print_sums.hpp"
-
 #include "print_perm.hpp"
+#include "print_subarrays.hpp"
 
 #include <iostream>
 
@@ -22,6 +20,9 @@ int main()
     std::cout << '\n';
 
     print_perm({1, 2, 3});
+    std::cout << '\n';
+
+    print_subarrays({ 1, 2, 3 });
     std::cout << '\n';
 
 }
