@@ -4,11 +4,13 @@
 #include <iostream>
 
 template<typename T>
-void print(const T& cont)
+std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec)
 {
-    for (auto value : cont)
+    for (const auto& value : vec)
     {
-        std::cout << value << ' ';
+        os << ' ' << value;
     }
-    std::cout << '\n';
+    os << '\n';
+
+    return os;
 }

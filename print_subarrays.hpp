@@ -4,7 +4,10 @@
 #include <vector>
 #include <iostream>
 
-void print_subarrays(const std::vector<int>& arr, int start, int end)
+namespace
+{
+
+void print_subarrays(const std::vector<int>& arr, int start, int end, std::vector<std::vector<int>>& acc)
 {
 
     if (end == arr.size()) // Stop if we have reached the end of the array
@@ -13,24 +16,24 @@ void print_subarrays(const std::vector<int>& arr, int start, int end)
     }
     else if (start > end) // Increment the end point and start from 0
     {
-        print_subarrays(arr, 0, end + 1);
+        print_subarrays(arr, 0, end + 1, acc);
     }
     else // Print the subarray and increment the starting point
     {
-        std::cout << "[";
-        for (int i = start; i < end; i++)
-        {
-            std::cout << arr[i] << ", ";
-        }
-
-        std::cout << arr[end] << "]\n";
-        print_subarrays(arr, start + 1, end);
+        auto b = arr.begin();
+        acc.push_back({b + start, b + end + 1});
+        print_subarrays(arr, start + 1, end, acc);
     }
 
     return;
 }
 
-void print_subarrays(const std::vector<int>& input)
+}
+
+std::vector<std::vector<int>> subarrays(const std::vector<int>& input)
 {
-    print_subarrays(input, 0, 0);
+    std::vector<std::vector<int>> acc;
+    print_subarrays(input, 0, 0, acc);
+
+    return acc;
 }

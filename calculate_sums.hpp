@@ -10,20 +10,12 @@ struct DataFrame
     std::vector<int> avail_coins;
 };
 
-void print(DataFrame df)
+std::vector<std::vector<int>> calculate_sums(std::vector<int> nums, int n)
 {
-    for (auto v : df.coins)
-    {
-        std::cout << v << ' ';
-    }
-    std::cout << '\n';
-}
-
-int print_sums(std::vector<int> nums, int n)
-{
+    std::vector<std::vector<int>> res;
     std::stack<DataFrame> s;
     s.push({n, {}, nums});
-    int ways = 0;
+
     while (!s.empty())
     {
         DataFrame top = s.top();
@@ -37,8 +29,7 @@ int print_sums(std::vector<int> nums, int n)
         if (top.sum == 0)
         {
             // we are done here
-            ++ways;
-            print(top);
+            res.push_back(top.coins);
             continue;
         }
 
@@ -62,6 +53,6 @@ int print_sums(std::vector<int> nums, int n)
         s.push(d);
     }
 
-    return ways;
+    return res;
 }
 

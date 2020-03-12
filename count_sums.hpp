@@ -1,7 +1,13 @@
 
 #pragma once
 
-long get_sums_count(std::vector<long> c, int n)
+/// Calculates number of all combination with given sum
+/// Input values treated as unique
+///
+/// \param c values
+/// \param n sum
+/// \return sum combinations
+long sums_count(const std::vector<long>& c, int n)
 {
     std::vector<long> numways(n + 1); // numways[x] means # ways to get sum x
     numways[0] = 1; // init base case n=0
