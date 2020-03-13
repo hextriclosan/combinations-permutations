@@ -30,6 +30,9 @@ void print_subarrays(const std::vector<int>& arr, int start, int end, std::vecto
 
 }
 
+/// Get all subarray of the given array
+/// \param input array
+/// \return subarrays
 std::vector<std::vector<int>> subarrays(const std::vector<int>& input)
 {
     std::vector<std::vector<int>> acc;
