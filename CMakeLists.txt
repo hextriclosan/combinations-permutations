@@ -10,6 +10,7 @@ add_executable(main
     subarrays.hpp
     calculate_sums.hpp
     unique_combinations.hpp
+    fib.hpp
     utils.hpp)
 
 target_compile_features(main PRIVATE cxx_std_17)

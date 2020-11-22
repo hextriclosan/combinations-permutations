@@ -5,6 +5,7 @@
 #include "calculate_sums.hpp"
 #include "calculate_permutations.hpp"
 #include "subarrays.hpp"
+#include "fib.hpp"
 
 #include <iostream>
 
@@ -46,5 +47,13 @@ int main()
         std::cout << "All subarray of " << input << ":\n";
         std::cout << subarrays(input);
         std::cout << '\n';
+    }
+
+    {
+        size_t nth = 15;
+        std::cout << nth <<  "th element of The Fibonacci Sequence:\n";
+        std::cout << "iterations: " << fib_iter(nth) << '\n';
+        std::cout << "recursion: " << fib_rec(nth) << '\n';
+        std::cout << "dynamic: " << fib_dyn(nth) << '\n';
     }
 }
