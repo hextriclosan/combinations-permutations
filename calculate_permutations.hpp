@@ -10,21 +10,21 @@
 namespace
 {
 
-void perm(std::vector<int>& input, int i, std::vector<std::vector<int>>& acc)
+void perm(std::vector<int>& input, const size_t start, std::vector<std::vector<int>>& acc)
 {
-    if (i == input.size())
+    if (start == input.size())
     {
         acc.push_back(input);
         return;
     }
 
-    for (int j = i; j < input.size(); j++)
+    for (int j = start; j < input.size(); j++)
     {
-        std::iter_swap(input.begin() + i, input.begin() + j);
+        std::iter_swap(input.begin() + start, input.begin() + j);
 
-        perm(input, i + 1, acc);
+        perm(input, start + 1, acc);
 
-        std::iter_swap(input.begin() + i, input.begin() + j);
+        std::iter_swap(input.begin() + start, input.begin() + j);
     }
 }
 
