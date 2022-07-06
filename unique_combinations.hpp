@@ -34,7 +34,7 @@ void unique_combination(const std::vector<int>& input, std::vector<int>& data, i
 /// \param input
 /// \param k
 /// \return
-std::vector<std::vector<int>> unique_combinations(const std::vector<int> input, int k)
+std::vector<std::vector<int>> unique_combinations(const std::vector<int>& input, int k)
 {
     std::vector<std::vector<int>> acc;
     std::vector<int> data(k);

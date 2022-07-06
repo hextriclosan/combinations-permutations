@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.8)
 
 project(combinations-permutations)
 
-add_executable(main
+add_executable(${CMAKE_PROJECT_NAME}
     main.cpp
     count_sums.hpp
     calculate_permutations.hpp
@@ -13,4 +13,4 @@ add_executable(main
     fib.hpp
     utils.hpp)
 
-target_compile_features(main PRIVATE cxx_std_17)
+target_compile_features(${CMAKE_PROJECT_NAME} PRIVATE cxx_std_17)
