@@ -2,15 +2,15 @@
 #pragma once
 
 #include <stack>
+namespace {
+    struct DataFrame {
+        int sum;
+        std::vector<int> coins;
+        std::vector<int> avail_coins;
+    };
+}
 
-struct DataFrame
-{
-    int sum;
-    std::vector<int> coins;
-    std::vector<int> avail_coins;
-};
-
-std::vector<std::vector<int>> calculate_sums(std::vector<int> nums, int n)
+std::vector<std::vector<int>> calculate_sums(const std::vector<int>& nums, int n)
 {
     std::vector<std::vector<int>> res;
     std::stack<DataFrame> s;
