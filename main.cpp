@@ -43,7 +43,7 @@ int main()
     }
 
     {
-        std::vector<int> input{1, 2, 3};
+        std::vector<int> input{1, 2, 3, 4};
         std::cout << "All subarray of " << input << ":\n";
         std::cout << subarrays(input);
         std::cout << '\n';
