@@ -44,8 +44,13 @@ int main()
 
     {
         std::vector<int> input{1, 2, 3, 4};
-        std::cout << "All subarray of " << input << ":\n";
-        std::cout << subarrays(input);
+
+        std::cout << "All subarrays of " << input << " recursively:\n";
+        std::cout << subarrays_recursively(input);
+        std::cout << '\n';
+
+        std::cout << "All subarrays of " << input << " iteratively:\n";
+        std::cout << subarrays_iteratively(input);
         std::cout << '\n';
     }
 
