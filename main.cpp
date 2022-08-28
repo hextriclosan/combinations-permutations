@@ -37,8 +37,22 @@ int main()
 
     {
         std::vector<int> input{1, 2, 3};
-        std::cout << "All permutations for " << input << ":\n";
-        std::cout << calculate_permutations(input);
+
+        std::cout << "All permutations for " << input << " recursive approach 1:\n";
+        std::cout << calculate_permutations_recursive1(input);
+
+        std::cout << "All permutations for " << input << " recursive approach 2:\n";
+        std::cout << calculate_permutations_recursive2(input);
+
+        std::cout << "All permutations for " << input << " Heap's recursive:\n";
+        std::cout << calculate_permutations_heaps_recursive(input);
+
+        std::cout << "All permutations for " << input << " Heap's iterative:\n";
+        std::cout << calculate_permutations_heaps_iterative(input);
+
+        std::cout << "All permutations for " << input << " lexicographic:\n";
+        std::cout << calculate_permutations_lexicographic(input);
+
         std::cout << '\n';
     }
 
@@ -56,7 +70,7 @@ int main()
 
     {
         size_t nth = 15;
-        std::cout << nth <<  "th element of The Fibonacci Sequence:\n";
+        std::cout << nth << "th element of The Fibonacci Sequence:\n";
         std::cout << "iterations: " << fib_iter(nth) << '\n';
         std::cout << "recursion: " << fib_rec(nth) << '\n';
         std::cout << "dynamic: " << fib_dyn(nth) << '\n';
